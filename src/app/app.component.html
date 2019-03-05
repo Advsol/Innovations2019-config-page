@@ -12,3 +12,11 @@
   </div>
   <label for="bool">Enable a thing</label>
 </div>
+
+
+<div class="PanelField Left">
+    <label for="string">Testing 123</label>
+    <div class="PanelFieldValue">
+        <input id="string" type="text" [(ngModel)]="settings.anotherSetting" (blur)="serializeSettings()"  >
+    </div>
+  </div>  
