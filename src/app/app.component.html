@@ -1,16 +1,14 @@
 
-<div class="PanelField Right">
+<div class="PanelField Left">
+  <label for="string">My setting</label>
   <div class="PanelFieldValue">
-      <input id="showPostedBatches" type="text" [(ngModel)]="settings.myStringSetting" (blur)="serializeSettings()"  >
+      <input id="string" type="text" [(ngModel)]="settings.myStringSetting" (blur)="serializeSettings()"  >
   </div>
-  <label for="showPostedBatches">My setting</label>
 </div>  
 
-<div class="PanelField Right">
+<div class="PanelField Left">
   <div class="PanelFieldValue">
-      <input id="showPostedBatches" type="checkbox" [(ngModel)]="settings.myBoolSetting" (blur)="serializeSettings()"  >
+      <input id="bool" type="checkbox" [(ngModel)]="settings.myBoolSetting" (blur)="serializeSettings()"  >
   </div>
-  <label for="showPostedBatches">Enable a thing</label>
-</div>     
-
-
+  <label for="bool">Enable a thing</label>
+</div>

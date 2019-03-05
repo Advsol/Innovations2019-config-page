@@ -31,5 +31,5 @@ export class MySettings
 {
   public myStringSetting: string;
   public myBoolSetting: string;
-  public mySelectSetting: string;
+  public anotherSetting: string;
 }

@@ -1,14 +1,19 @@
 {
   "name": "config-page",
   "version": "0.0.0",
+  "watch": {
+    "postbuild": "dist/**/*.js"
+  },  
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --deploy-url http://localhost/config/",
+    "build": "ng build --deploy-url https://asiprostorage.blob.core.windows.net/innovations/config-demo/ --prod",
+    "build-sync": "npm-watch",
+    "build-watch": "ng build --deploy-url https://asiprostorage.blob.core.windows.net/innovations/config-demo/ --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postbuild": "node body-cleanup.js" 
+    "postbuild": "node body-cleanup.js && sync-demo.bat"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +26,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "npm-watch": "^0.6.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
