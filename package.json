@@ -2,18 +2,19 @@
   "name": "config-page",
   "version": "0.0.0",
   "watch": {
-    "postbuild": "dist/**/*.js"
+    "postbuild1": "dist/**/*.js"
   },  
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --deploy-url https://asiprostorage.blob.core.windows.net/innovations/config-demo/ --prod",
+    "build-pipeline": "ng build --deploy-url https://asiprostorage.blob.core.windows.net/innovations/config-demo/ --prod",
+    "build": "ng build --deploy-url https://asiprostorage.blob.core.windows.net/innovations/config-demo/ --prod && npm run postbuild1",
     "build-sync": "npm-watch",
     "build-watch": "ng build --deploy-url https://asiprostorage.blob.core.windows.net/innovations/config-demo/ --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postbuild": "node body-cleanup.js && sync-demo.bat"
+    "postbuild1": "node body-cleanup.js && sync-demo.bat"
   },
   "private": true,
   "dependencies": {
